@@ -1,48 +1,48 @@
-# Проект: Мини-чат на FastAPI
+# Project: Mini-chat on FastAPI
 
-Данный проект представляет собой мини-чат с использованием **FastAPI** для создания API, **SQLAlchemy** для работы с базой данных и простого фронтенда для взаимодействия с пользователями. Приложение содержит две основные модели: модель пользователей и модель сообщений, что позволяет пользователям отправлять и получать сообщения в реальном времени.
+This project is a mini-chat using **FastAPI** to create an API, **SQLAlchemy** to work with a database, and a simple frontend to interact with users. The app contains two main models: a user model and a message model, which allows users to send and receive messages in real time.
 
-## Стек технологий:
+## Technology Stack:
 - **Backend**: FastAPI
 - **Frontend**: HTML/JavaScript
 - **ORM**: SQLAlchemy
-- **База данных**: Любая поддерживаемая SQLAlchemy база данных (например, PostgreSQL или SQLite). В примере используется SQLite.
+- Database: Any database supported by SQLAlchemy (e.g., PostgreSQL or SQLite). The example uses SQLite.
 
-## Основные компоненты:
-1. **Модель пользователя**: содержит информацию о пользователях, включая имя пользователя, email и пароль.
-2. **Модель сообщений**: хранит сообщения, отправленные пользователями, включая время отправки, отправителя и текст сообщения.
+## Main components:
+1. User Model: Contains user information, including username, email and password.
+2. Message Model: Stores messages sent by users, including the time they were sent, the sender, and the body of the message.
 
-## Функционал:
-Это веб-приложение для обмена сообщениями, в котором пользователи могут отправлять и получать сообщения в реальном времени. Основные возможности включают:
+## Functionality:
+It is a web-based messaging application where users can send and receive real-time messages. Key features include:
 
-1. **Аутентификация**: Регистрация и авторизация пользователей через формы на HTML и JavaScript. Используются API для обработки и валидации данных.
-2. **Чат**: Пользователи могут выбирать собеседников из списка и общаться с ними. Сообщения отображаются в окне чата.
-3. **Отправка сообщений**: Пользователи могут отправлять текстовые сообщения. Для мгновенной доставки сообщений используется WebSocket. Старые сообщения подгружаются при помощи опроса сервера.
-4. **Интерфейс**: Современный и адаптивный интерфейс с использованием CSS, обеспечивающий удобное взаимодействие на различных устройствах.
-5. **Управление пользователями**: Возможность выбора собеседников, выхода из системы и работы с "Избранным" по типу "Избранного" с телеграмм..
+1. Authentication: Register and authorize users through HTML and JavaScript forms. APIs are used for data processing and validation.
+2. **Chat**: Users can select interlocutors from the list and chat with them. Messages are displayed in the chat window.
+3. Sending Messages: Users can send text messages. WebSocket is used for instant message delivery. Old messages are loaded using server polling.
+4. Interface: A modern and responsive interface using CSS that provides a seamless experience across devices.
+5. **User Management**: Ability to select interlocutors, log out and work with "Favorites" like "Favorites" from telegrams.
 
-## Пример GIF-анимации
+## GIF Animation Example
 
-Ниже представлена анимация, демонстрирующая процесс работы приложения:
+Below is an animation that demonstrates the process of the application:
 
 <img src="demo.gif" width="600" alt="Демонстрация работы мини-чата" />
 
 ---
 
-## Как запустить проект
+## How to launch a project
 
-### Установка зависимостей:
+### Installing Dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Выполнение миграций Alembic:
+### Performing Alembic Migrations:
 
 ```bash
 alembic upgrade head
 ```
-### Запуск проекта:
+### Project launch:
 ```bash
 uvicorn app.main:app
 ```
